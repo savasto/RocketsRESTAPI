@@ -20,7 +20,6 @@ public class RocketRestController {
 
     @PostMapping("/rockets/{rocketId}/movement")
     public void addMovement(@PathVariable String rocketId, @RequestBody Movement movement) throws Exception {
-       // movement.checkTypeOfMovement();//?
         rocketService.addMovement(rocketId, movement);
     }
 
@@ -68,7 +67,6 @@ public class RocketRestController {
     @DeleteMapping("/rockets/{rocketId}/propellers/{propellerId}")
     public void removePropeller(@PathVariable String rocketId, @PathVariable String propellerId) throws Exception {
         rocketService.removePropeller(rocketId, propellerId);
-
     }
 
 

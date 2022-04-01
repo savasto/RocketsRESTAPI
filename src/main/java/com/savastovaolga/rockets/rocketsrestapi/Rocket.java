@@ -78,15 +78,11 @@ public class Rocket {
     }
 
     public Propeller addPropeller(Propeller propeller) throws Exception {
-       // checkNumberOfPropellers(propeller);//?
         propeller.setRocket(this);
         this.propellers.add(propeller);
         return propeller;
     }
 
-//    private void checkNumberOfPropellers(Propeller propeller) throws Exception {
-//        if (propellers.size() == 0) throw new Exception("Number of propellers cannot be 0");
-//    }
 
 
     @JsonProperty("currentPower")
